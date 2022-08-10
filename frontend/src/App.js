@@ -16,6 +16,7 @@ function App() {
       .then((result) => result.json()) // esto devuelve si es success. Tambien devuelve una promesa
       .then((data) => { console.log(data); }) // tenemos que resolver la promesa de arriba. data es info que manda el server
       .catch((err) => { console.log(err);  }) // ocurre si la promesa fue rechazada
+    setWord("")    
   }
 
   return (
