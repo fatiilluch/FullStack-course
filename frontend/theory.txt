@@ -1,0 +1,57 @@
+accesskey: n8XaXBsgUd_l2usygubn7T-uKynCO9kTJw4Pn3hI9oI
+secretKey: bMyvPpYxZrEZBpXxChMCVXFJpkcuv5Mk5QcAvaGmmZQ
+
+State
+
+Style
+
+1 forma:
+
+
+const navbarStyle = {
+  backgroundColor: 'lightblue'
+}
+
+const Header = ({ title }) => {
+  return (
+    <Navbar style={navbarStyle} variant='light'>
+        <Navbar.Brand href='/'> {title} </Navbar.Brand>
+    </Navbar>
+  )
+}
+
+
+2° forma
+
+--------------------------------
+
+preventDefault se usa para
+
+--------------------------------
+
+useState es una funcion que devuelve dos valores:
+1° un string
+2° una funcion
+
+onChange: any time when you change input, we will update state of application (llama a setWord)
+
+environment variables: located in the process.env object
+Node.js is used to run create-react-app application in development mode.
+That's why it has access to the global Node.js variable named process
+
+Las variables del .env tienen que arrancar con REACT_APP_ 
+
+PROMESAS
+
+Promises in JS are used to handle delayed actions. 
+
+In this example we send request to the remote server but don't know when it will answer. 
+Waiting for response doesn't block execution of other parts of the application code. 
+
+We see the result of the response from the server after some amount of time. 
+
+{id: 'XwbzsOOC0Ws', created_at: '2018-11-28T18:07:16Z', updated_at: '2022-08-10T18:05:03Z', promoted_at: '2018-11-29T06:26:05Z', width: 3648, …}
+
+fetch fucntion sent request to the server and was waiting for the response from it.
+
+After response was received, promise was resolved inside of the fetch function
