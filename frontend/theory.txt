@@ -33,6 +33,11 @@ useState es una funcion que devuelve dos valores:
 1° un string
 2° una funcion
 
+When useState React hook is in use, such funcions as setImages or setWord update values of the corresponding variables in the state ASYNCHRONOUSLY
+
+Inmediately after setImages go, we willn't be able to see the updated array of images 
+
+
 onChange: any time when you change input, we will update state of application (llama a setWord)
 
 environment variables: located in the process.env object
@@ -52,7 +57,7 @@ We see the result of the response from the server after some amount of time.
 
 {id: 'XwbzsOOC0Ws', created_at: '2018-11-28T18:07:16Z', updated_at: '2022-08-10T18:05:03Z', promoted_at: '2018-11-29T06:26:05Z', width: 3648, …}
 
-fetch fucntion sent request to the server and was waiting for the response from it.
+fetch function sent request to the server and was waiting for the response from it.
 
 After response was received, promise was resolved inside of the fetch function
 

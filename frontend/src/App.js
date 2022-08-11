@@ -7,6 +7,9 @@ const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
 
 function App() {
   const [word, setWord] = useState("");
+  const [images, setImages] = useState([]); // cuando la aplicacion arranca no tenemos imagenes
+
+  console.log(images);
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +20,7 @@ function App() {
     )
       .then((result) => result.json()) // esto devuelve si es success. Tambien devuelve una promesa
       .then((data) => {
-        console.log(data);
+        setImages([data, ...images]); // le pasamos un array de imagenes existente.
       }) // tenemos que resolver la promesa de arriba. data es info que manda el server
       .catch((err) => {
         console.log(err);
