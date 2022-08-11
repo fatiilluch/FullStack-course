@@ -55,3 +55,9 @@ We see the result of the response from the server after some amount of time.
 fetch fucntion sent request to the server and was waiting for the response from it.
 
 After response was received, promise was resolved inside of the fetch function
+
+-------------------------------------------------------------------------------
+
+npm i -D algo --> instala dev dependencies
+
+npm install -D prettier eslint-config-prettier eslint-plugin-prettier
