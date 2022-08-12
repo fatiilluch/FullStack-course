@@ -25,7 +25,7 @@ const Header = ({ title }) => {
 
 --------------------------------
 
-preventDefault se usa para
+preventDefault se usa para cancelar el evento, lo que significa que cualquier acción por defecto que deba producirse como resultado de este evento, no ocurrirá.
 
 --------------------------------
 
