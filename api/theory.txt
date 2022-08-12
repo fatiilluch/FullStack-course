@@ -1,0 +1,6 @@
+Crear un virtual env
+
+1. instalar pipenv (pip install pipenv)
+2. pipenv install <libreria> 
+3. To activate this project's virtualenv, run pipenv shell.
+4. elegir el interprete como ./api/.venv/bin/python3
