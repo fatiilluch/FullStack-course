@@ -4,3 +4,28 @@ Crear un virtual env
 2. pipenv install <libreria> 
 3. To activate this project's virtualenv, run pipenv shell.
 4. elegir el interprete como ./api/.venv/bin/python3
+5. para salir del virtual env, simplemente escribir exit
+
+Para correr la app
+
+1. export FLASK_APP=<nombre de la app>
+2. export FLASK_ENV=development # exportamos el entorno 
+3. flask run --reload # reload hace que no tengamos que apagar y prender el server cada vez que queramos probar la app
+
+Nota: Cuando abra un nuevo terminal, es importante recordar activar el entorno virtual y configurar las variables de entorno 
+FLASK_ENV y FLASK_APP.
+
+Mientras un servidor de desarrollo de la aplicación de Flask esté ejecutándose, no es posible ejecutar otra aplicación Flask con 
+el mismo comando flask run. Esto es porque flask run utiliza el número de puerto 5000 por defecto, y una vez utilizado, no está 
+disponible para ejecutar otra aplicación, de forma que recibiría un error similar al siguiente:
+
+Output
+OSError: [Errno 98] Address already in use
+
+Para resolver este problema, detenga el servidor que se está ejecutando actualmente mediante CTRL+C, 
+luego ejecute flask run de nuevo, o si desea que ambos se ejecuten a la vez, puede pasar un número de puerto diferente al argumento -p;
+
+Por ejemplo, para ejecutar otra aplicación en el puerto 5001 utilice el siguiente comando: flask run -p 5001
+
+Hya que instalr python-dotebv para importar environment variables
+
