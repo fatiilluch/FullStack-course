@@ -6,7 +6,8 @@ import ImageCard from "./components/ImageCard";
 import Welcome from "./components/Welcome";
 import { Container, Row, Col } from "react-bootstrap";
 
-const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
+// const UNSPLASH_KEY = process.env.REACT_APP_UNSPLASH_KEY;
+const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:5050";
 
 function App() {
   const [word, setWord] = useState("");
@@ -16,9 +17,10 @@ function App() {
     e.preventDefault();
     // console.log(e.target[0].value);
     // console.log(word);
-    fetch(
-      `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`
-    )
+    // fetch(
+    //   `https://api.unsplash.com/photos/random/?query=${word}&client_id=${UNSPLASH_KEY}`
+    // )
+    fetch(`${API_URL}/newImage?query=${word}`)
       .then((result) => result.json()) // esto devuelve si es success. Tambien devuelve una promesa
       .then((data) => {
         setImages([{ ...data, title: word }, ...images]); // le pasamos un array de imagenes existente.
