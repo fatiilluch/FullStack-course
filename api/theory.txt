@@ -29,3 +29,6 @@ Por ejemplo, para ejecutar otra aplicación en el puerto 5001 utilice el siguien
 
 Hya que instalr python-dotebv para importar environment variables
 
+Black == formatter
+pylint == eslint
+pycodestyle = style guide checker
